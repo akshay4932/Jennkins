@@ -1,0 +1,20 @@
+sudo apt updatesudo apt install openjdk-8-jdk
+
+sudo update-alternatives --config java
+
+JAVA_HOME="/usr/lib/jvm/java-11-openjdk-amd64/bin/"
+
+sudo nano /etc/environment
+
+wget -q -O - https://pkg.jenkins.io/debian/jenkins.io.key | sudo apt-key add -
+
+sudo sh -c 'echo deb http://pkg.jenkins.io/debian-stable binary/ > /etc/apt/sources.list.d/jenkins.list'
+
+sudo apt update
+
+sudo apt install jenkins
+
+systemctl status jenkins
+
+sudo cat /var/lib/jenkins/secrets/initialAdminPassword
+
