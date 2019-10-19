@@ -1,10 +1,12 @@
-sudo apt updatesudo apt install openjdk-8-jdk
+sudo apt update
 
-sudo update-alternatives --config java
+sudo apt install openjdk-8-jdk
+
+sudo update-alternatives --config java 
 
 JAVA_HOME="/usr/lib/jvm/java-11-openjdk-amd64/bin/"
 
-sudo nano /etc/environment
+sudo vi /etc/environment
 
 wget -q -O - https://pkg.jenkins.io/debian/jenkins.io.key | sudo apt-key add -
 
